@@ -33,14 +33,13 @@
 
   <div>
     <%= form.label :marca_id, style: "display: block" %>
-    <%#= form.collection_select :marca_id, @marca, :id, :nombre  %>
-    <%= form.collection_select @marca, :id, @marca_array || [], :nombre %>
+    <%= form.text_field :marca_id  %>
   </div>
 
   <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
-  </div>
+    <%#= form.label :user_id, style: "display: block" %>
+    <%= form.hidden_field :user_id, value:current_user.id.to_i %>
+  </div> 
 
   <div>
     <%= form.submit %>

@@ -16,7 +16,6 @@ class ArticulosController < ApplicationController
   def new
     @articulo = Articulo.new
     @marca = Marca.all
-    puts @marca
   end
 
   # GET /articulos/1/edit
